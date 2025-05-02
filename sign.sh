@@ -10,6 +10,7 @@ jarsigner -J-Djava.class.path=/app/lib/digicert-jce-1.0.jar:/app/lib/bcprov-jdk1
   -providerClass com.digicert.jce.Provider \
   -signedjar "${JAR%.*}-signed.jar"\
   -sigalg SHA256withRSA \
+  -tsadigestalg SHA-256 \
   -tsa "http://timestamp.digicert.com" \
   "$JAR" \
   "$SM_KEYPAIR" \
